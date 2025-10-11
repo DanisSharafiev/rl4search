@@ -30,6 +30,8 @@ class CandidateGenerator:
 
         # BM25 part
         bm25_scores = self.bm25.get_scores(query_processed)
+
+        # normalization
         bm25_min = bm25_scores.min()
         bm25_max = bm25_scores.max()
         bm25_range = bm25_max - bm25_min if bm25_max > bm25_min else 1.0

@@ -1,5 +1,5 @@
 import pandas as pd
-from src.candidate_generation.candidate_generator import CandidateGenerator
+from src.search.candidate_generator import CandidateGenerator
 
 data = pd.read_csv('data/data_raw.csv')
 
