@@ -5,10 +5,10 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from src.utils.similarity_metrics import cosine_similarity
 from src.data.data_preprocess import build_bm25_index_from_df, preprocess_text_for_BM25
-
+import pandas as pd
 
 class ItemsData:
-    def __init__(self, df = None):
+    def __init__(self, df : pd.DataFrame = None) -> None:
         if df is None:
             raise ValueError("DataFrame must be provided")
         df = preprocess_text_for_BM25(df, text_col=TEXT_COLUMN)
@@ -23,3 +23,4 @@ class ItemsData:
         print("FAISS index created.")
         self.stop_words = set(stopwords.words("english"))
         self.lemmatizer = WordNetLemmatizer()
+        self.embedding_size = embeddings.shape[1]
