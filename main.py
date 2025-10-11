@@ -1,6 +1,8 @@
 import pandas as pd
 from src.search.candidate_generator import CandidateGenerator
 
+# doesnt work now because of changes in CandidateGenerator
+
 data = pd.read_csv('data/data_raw.csv')
 
 cg = CandidateGenerator(alpha=0.05, df=data)
