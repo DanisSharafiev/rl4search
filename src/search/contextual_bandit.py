@@ -33,10 +33,11 @@ class ContextualBanditReranker:
         return float(reward)
     
     def rerank(self, query : str) -> list:
-        self.ranked_items = sorted(self.candidates, key=lambda x: self.reward_function(query, x), reverse=True)
+        print(self.candidates[:2])
+        self.ranked_items = sorted(self.candidates, key=lambda x: self.reward_function(query, x[0]), reverse=True)
         return self.ranked_items
     
-    def get_k_items(self, idx : int, k : int) -> list:
+    def get_page(self, idx : int, k : int) -> list:
         if not self.ranked_items:
             print("No ranked items available. Please run rerank() first.")
             return []
