@@ -27,6 +27,12 @@ def ndcg(relevance_scores: List[int], k : int) -> float:
 
     return actual_dcg / ideal_dcg if ideal_dcg > 0 else 0.0
 
+def precision_at_k(relevance_scores: List[int], k: int) -> float:
+    if k == 0:
+        return 0.0
+    relevant_items = sum(relevance_scores[:k])
+    return relevant_items / k
+
 def calculate_delta_ndcg_rewards(
     displayed_items: List[tuple[int, float]], 
     user_clicks_df: pd.DataFrame,

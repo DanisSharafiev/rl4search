@@ -8,11 +8,13 @@ class RewardPredictor(nn.Module):
     def __init__(self, input_dim):
         super(RewardPredictor, self).__init__()
         self.net = nn.Sequential(
-            nn.Linear(input_dim, 128),
+            nn.Linear(input_dim, 64),
             nn.ReLU(),
-            nn.Linear(128, 64),
+            nn.Dropout(0.3),
+            nn.Linear(64, 32),
             nn.ReLU(),
-            nn.Linear(64, 1)
+            nn.Dropout(0.3),
+            nn.Linear(32, 1)
         )
         
     def forward(self, x):
@@ -24,7 +26,7 @@ class NeuralBanditReranker:
         self.items_data = items_data
         self.epsilon = epsilon
         self.embedding_size = items_data.embedding_size
-        self.input_dim = self.embedding_size * 2 
+        self.input_dim = self.embedding_size * 2 + 1
         
         self.device = torch.device("cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu"))
         
@@ -36,14 +38,24 @@ class NeuralBanditReranker:
         if optimizer:
             self.optimizer = optimizer
         else:
-            self.optimizer = optim.Adam(self.model.parameters(), lr=lr)
+            self.optimizer = optim.Adam(self.model.parameters(), lr=lr, weight_decay=1e-4)
             
         self.criterion = nn.MSELoss()
         self.ranked_items = []
 
     def _get_features(self, query_emb, item_idx):
         item_emb = self.items_data.index.reconstruct(int(item_idx))
-        features = np.concatenate([query_emb, item_emb])
+        
+        # Explicit interaction feature: Cosine Similarity
+        # Helps the model generalize better than just raw concatenation
+        norm_q = np.linalg.norm(query_emb)
+        norm_i = np.linalg.norm(item_emb)
+        if norm_q > 0 and norm_i > 0:
+            cos_sim = np.dot(query_emb, item_emb) / (norm_q * norm_i)
+        else:
+            cos_sim = 0.0
+            
+        features = np.concatenate([query_emb, item_emb, [cos_sim]])
         return torch.FloatTensor(features).to(self.device)
 
     def rerank(self, query: str) -> list:
@@ -98,3 +110,35 @@ class NeuralBanditReranker:
         
         loss.backward()
         self.optimizer.step()
+
+    def update_pairwise(self, query: str, displayed_items: list[tuple[int, float]], clicks: list[int]) -> None:
+        query_emb = self.items_data.model.encode([query], convert_to_tensor=True).cpu().numpy().flatten()
+        
+        pos_items = [item_idx for (item_idx, _), clicked in zip(displayed_items, clicks) if clicked == 1]
+        neg_items = [item_idx for (item_idx, _), clicked in zip(displayed_items, clicks) if clicked == 0]
+        
+        if not pos_items or not neg_items:
+            return
+
+        self.model.train()
+        self.optimizer.zero_grad()
+        
+        loss = torch.tensor(0.0, device=self.device, requires_grad=True)
+        pairs_count = 0
+        
+        for pos_idx in pos_items:
+            pos_features = self._get_features(query_emb, pos_idx)
+            pos_score = self.model(pos_features)
+            
+            for neg_idx in neg_items:
+                neg_features = self._get_features(query_emb, neg_idx)
+                neg_score = self.model(neg_features)
+                
+                current_loss = torch.relu(1.0 - (pos_score - neg_score))
+                loss = loss + current_loss
+                pairs_count += 1
+        
+        if pairs_count > 0:
+            loss = loss / pairs_count
+            loss.backward()
+            self.optimizer.step()
