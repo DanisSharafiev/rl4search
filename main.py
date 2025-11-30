@@ -13,10 +13,10 @@ query = "teamsync"
 candidates = cg.generate_candidates(query, top_k=50)
 
 cb = ContextualBanditReranker(candidates=candidates, items_data=items_data)
-
 cb.rerank(query)
+cb_candidates = cb.get_page(0, 3)
 
-candidates = cb.get_page(0, 3)
+candidates = cb_candidates
 
 print("Top candidates:")
 for idx, score in candidates:

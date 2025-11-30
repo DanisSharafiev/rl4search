@@ -11,7 +11,7 @@ class CandidateGenerator:
         self.alpha = alpha
         print("CandidateGenerator initialized.")
 
-    def generate_candidates(self, query: str, top_k: int = 5) -> list:
+    def generate_candidates(self, query: str, top_k: int = 5) -> list[tuple[int, float]]:
         query_processed = preprocess_text(query, self.items_data.stop_words, self.items_data.lemmatizer)
 
         # BM25 part

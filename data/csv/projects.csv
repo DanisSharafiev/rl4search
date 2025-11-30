@@ -1,0 +1,119 @@
+id,Name,Description
+0,TeamSync,"TeamSync aims to improve the quality and balance of student teams by offering a data-driven, user-friendly experience for discovering, evaluating, and matching with potential teammates."
+1,RandomCoffee,"Random Coffee is a web-based service integrated within a Telegram bot, designed to foster meaningful connections through casual meetups. Users can register, set their preferences, and choose relevant tags that reflect their interests or professional background. The system matches them weekly with others who share similar interests."
+2,EvOps,"A self-hosted platform to share and discover local events, providing recommendations based on user preferences and location."
+3,UrTraining,"A web-based platform for creating, distributing, and following personalized training plans. AI-powered recommendations help users reach their fitness goals efficiently."
+4,Red7,"An online version of the Russian game '7Red', featuring secure authentication, multiple game modes, player statistics, and achievements."
+5,SolarWind,"An app connecting people through sports and active lifestyles. Users can find workout buddies, join local events, or chat with like-minded athletes."
+6,ControlLab,"Software and hardware platform for robotics students to practice Control Theory, Reinforcement Learning, and modern robotics techniques."
+7,SmartClause,"AI service for contract analysis, identifying legal risks and compliance issues using semantic search and language models."
+8,VerilogContest,"A contest platform for digital design practice using hardware description languages, with automated verification of solutions."
+9,EasyTravel,Smart service to find interesting city locations for walks or relaxation. Understands free-form requests and suggests places based on context and user interests.
+10,Smartify,"Educational platform combining career guidance, university selection, and tutor recommendations with AI-powered personalization for students."
+11,GymGenius,Offline-friendly workout tracker that syncs to the cloud and provides AI coaching for smarter progression. Web dashboard available for monitoring and moderation.
+12,InnoServicesSearch,"AI-powered search platform for university services, allowing students to quickly find information about dormitories, classes, and facilities."
+13,InnopolisGame,"Unity 2.5D game where players explore university areas, interact with NPCs, and learn through mini-quests and dialogues."
+14,Mealix,"Telegram mini-app generating personalized meal plans based on dietary preferences, allergies, and favorite cuisines, with detailed cooking instructions and product lists."
+15,Killah,"AI writing companion for macOS using on-device LLM to help users start, continue, and refine their writing projects."
+16,SkillsNavigator,"Website that builds personalized learning roadmaps, recommending courses based on skill level, goals, and budget."
+17,KIZAK,"AI learning assistant guiding IT learners with personalized paths, daily/weekly tasks, and progress tracking through a smart coach."
+18,NeuroCoach,"Intelligent AI assistant providing personalized coaching for fitness, learning, or productivity with interactive guidance and progress tracking."
+19,LibNet,"Service unifying book search across multiple libraries, allowing reservations and easy tracking of availability."
+20,SignGame,Unity 2D game where players draw symbols to defeat enemies.
+21,DeathRoom,"Fast-paced arena shooter inspired by Quake and Call of Duty, with up to 12-player multiplayer matches and leaderboards."
+22,EgoAI,Personal AI assistant helping users organize tasks and view news updates efficiently.
+23,BookRecommendation,Distributed system generating personalized book recommendations based on reading history and ratings.
+24,PALTUS,"Web-service using AI and gamification to help users organize self-study, offering lessons with subtopics and study resources."
+25,OutfitPredict,Web platform recommending outfits based on user wardrobe and fashion trends from movies and fashion collections.
+26,Kolobok,"Software analyzing tire brands, models, and conditions, designed for car services and retail."
+27,VoiceDiary,"AI-powered voice journaling tool analyzing tone, emotion, and themes to provide personalized insights and well-being suggestions."
+28,Metalytics,"Analytical system forecasting prices of metals on stock exchanges, considering news, sanctions, and macroeconomic indicators."
+29,ReadTracker,Platform tracking books read and providing reading statistics and insights.
+30,ProjectOR,"Platform allowing creators to post startup ideas, developers to explore projects, and teams to collaborate efficiently."
+31,FishMasters,"Application for fishermen to find fishing spots, track catches, and compare with other users."
+32,TheCOOrP,"Cooperative anomaly management simulation in Godot engine, similar to Lobotomy Corporation."
+33,InnoSync,Talent-matching and project collaboration platform for university communities using AI-powered matchmaking.
+34,DataSculptor,Integrated IDE agent mentoring users in Machine Learning and Data Science with real-time educational feedback.
+35,Fluently,Application providing personalized English lessons and realistic conversations with AI for learners at A2-C2 CEFR levels.
+36,Looki,Virtual fitting app using computer vision and 3D modeling to recommend clothing sizes and create personalized 3D models.
+37,Vanguard,Interactive platform for creating and playing real-time quizzes with gamification elements and detailed analytics.
+38,EdHub,"Learning Management System for teachers, students, and parents with assignment tracking and grading."
+39,AutonomousDrift,Autonomous drift stabilization system for vehicles using minimal sensor data to maintain stability.
+40,StyleU,"AI stylist recommending clothes based on color and body type, collecting images from marketplaces."
+41,ProjectFly,Agricultural drone solution for measuring liquid levels in UAV tanks for crop spraying.
+42,Hypershelf,"Digital asset inventory system unifying information with static views, links, and plugin system."
+43,CookCookhNya,Application suggesting recipes based on available ingredients and user preferences.
+44,MLTD,Threat detection API using machine learning to analyze log files and detect cyber threats.
+45,InnoLock,Network-isolation solution for endpoints with centralized management and anomaly detection.
+46,OpenLabsShare,Open platform for sharing experiments and knowledge with instant feedback and reputation points.
+47,GoalSight,"AI tool aggregating and visualizing football statistics from various sources for coaches, journalists, and fans."
+48,EveningJam,Narrative-driven platformer-puzzle game featuring unique energy-transfer mechanics and a hand-drawn visual style.
+49,NextLearn,Online platform generating personalized study plans and course recommendations using AI.
+50,FitBuddy,Mobile app connecting fitness enthusiasts for joint workouts and tracking progress with gamification.
+51,CodeSandboxAI,"Cloud IDE with AI assistant providing code suggestions, debugging help, and project templates."
+52,TravelMate,Smart travel companion app suggesting personalized itineraries based on user preferences.
+53,PlantPal,"App tracking plant care schedules, watering reminders, and providing AI-based care tips."
+54,Artify,Platform for AI-assisted digital art creation and collaborative projects.
+55,LangLoop,"Language learning app with AI-generated exercises, conversation practice, and spaced repetition."
+56,TaskHive,Task management platform integrating AI prioritization and team collaboration tools.
+57,MusicMood,"App recommending playlists based on user mood and activity, with AI-generated music suggestions."
+58,FoodExplorer,"Platform suggesting restaurants and recipes based on user preferences, dietary restrictions, and location."
+59,SmartWallet,"Personal finance app using AI to track expenses, budget, and suggest savings strategies."
+60,MediTrack,"Healthcare app tracking symptoms, medication schedules, and providing AI-driven advice."
+61,EcoDrive,Application monitoring driving behavior to reduce emissions and fuel consumption.
+62,QuizMaster,Platform for creating and participating in quizzes with real-time leaderboard and analytics.
+63,PetConnect,"App connecting pet owners for playdates, care advice, and community events."
+64,CodeChallenge,Coding practice platform with AI-generated problems and automated feedback.
+65,SafeHome,Smart home security system with AI monitoring and anomaly detection alerts.
+66,BookClubAI,Platform for organizing book clubs and generating discussion questions using AI.
+67,SkillForge,Learning platform recommending skill development pathways and tracking progress.
+68,HealthBuddy,Fitness and wellness app combining AI workout plans and nutrition tracking.
+69,EventSync,"Platform for discovering, organizing, and managing local events with AI recommendations."
+70,CryptoMonitor,"Application tracking cryptocurrency prices, trends, and providing AI investment insights."
+71,GameLab,Educational platform teaching game development through hands-on projects and AI guidance.
+72,RoboSim,Simulation software for robotics students with AI-assisted learning modules.
+73,FoodPlanner,App generating weekly meal plans based on preferences and dietary restrictions.
+74,StudyPal,AI study assistant providing personalized learning schedules and resources.
+75,SmartCity,"Platform integrating city data to optimize traffic, energy, and resource usage."
+76,TravelGuideAI,"AI-driven travel guide suggesting itineraries, attractions, and local experiences."
+77,CodeMentor,Platform connecting coding learners with mentors using AI to match skill levels and goals.
+78,ShopAdvisor,Shopping app recommending products based on user behavior and AI-driven analysis.
+79,ArtGalleryAI,Virtual gallery platform showcasing AI-curated art collections and exhibitions.
+80,MusicCollab,Platform enabling musicians to collaborate online with AI-assisted composition tools.
+81,EcoHome,App suggesting eco-friendly home improvements and energy-saving tips.
+82,FitnessArena,"Virtual fitness platform offering live classes, AI-tracking, and gamified challenges."
+83,LangTutor,AI-powered language tutor providing interactive lessons and feedback.
+84,SmartLibrary,Digital library platform with AI-based search and recommendation for books and articles.
+85,RecipeMaster,App generating recipes based on available ingredients and user dietary preferences.
+86,CodeArena,Competitive coding platform with AI-driven problem suggestions and leaderboards.
+87,TravelPlannerPro,App providing AI-powered travel itineraries and booking recommendations.
+88,PlantDoctor,AI app diagnosing plant diseases and suggesting treatment options.
+89,MusicCoach,AI assistant helping users learn instruments and practice effectively.
+90,GameStudioAI,Platform for collaborative game development with AI-assisted design and testing.
+91,LearnTogether,Social learning platform connecting students for collaborative projects with AI guidance.
+92,FitTrack,"Fitness tracking app integrating AI coaching, wearable data, and goal tracking."
+93,StudyQuest,Gamified learning platform with AI-generated challenges and progress tracking.
+94,EcoTravel,App recommending sustainable travel options and eco-friendly accommodations.
+95,CodeLab,Interactive coding environment with AI assistance for debugging and optimization.
+96,ArtSchoolAI,Platform teaching digital art with AI feedback and tutorials.
+97,FoodCompanion,App tracking nutrition and suggesting recipes based on health goals.
+98,RoboAcademy,"Educational platform for robotics with simulations, AI-guided exercises, and projects."
+99,GameArena,"Competitive online gaming platform with matchmaking, stats tracking, and AI insights."
+100,TravelCompanion,"App providing travel tips, local insights, and AI-generated itineraries."
+101,MusicStudio,Virtual studio platform for collaborative music production with AI assistance.
+102,StudyHub,Centralized learning platform with AI-curated resources and progress analytics.
+103,EcoPlanner,"Tool for planning eco-friendly projects, reducing carbon footprint, and tracking sustainability goals."
+104,CodeCompanion,"AI assistant for developers providing suggestions, error fixes, and learning resources."
+105,PlantGuide,"App providing AI-powered guidance for plant care, growth tracking, and disease prevention."
+106,GameLabPro,"Platform for creating, testing, and sharing educational games with AI support."
+107,FitPlanner,AI-driven personal fitness planning app with progress tracking and goal setting.
+108,LearnAI,"Learning platform providing personalized study plans, quizzes, and AI-guided lessons."
+109,ArtCompanion,"AI-assisted art creation platform offering tutorials, design suggestions, and collaboration tools."
+110,MusicExplorer,App discovering new music based on user preferences and AI recommendations.
+111,EcoFitness,Platform combining fitness tracking with eco-friendly lifestyle tips and challenges.
+112,StudyPlanner,"AI tool for organizing study schedules, tasks, and learning resources efficiently."
+113,TravelExplorer,App providing AI-curated travel suggestions and personalized itineraries.
+114,GameMakerAI,"Tool for designing games with AI-assisted level design, mechanics, and testing."
+115,FitCoach,"AI-powered coaching app offering personalized workouts, nutrition plans, and progress tracking."
+116,ArtLab,Interactive platform for learning art techniques with AI feedback and collaborative projects.
+117,MusicMentor,AI platform guiding users through instrument learning and music theory.
